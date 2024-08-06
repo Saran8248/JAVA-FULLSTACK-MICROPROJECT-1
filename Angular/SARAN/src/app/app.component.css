@@ -1,0 +1,48 @@
+.box{
+  border: 2px solid black;
+  background-color: aquamarine;
+  font-family: "Audiowide", sans-serif;
+  text-align: center;
+  margin-top:50px;
+  padding: 10px;
+  margin-left:20%;
+  margin-right: 20%;
+  border-radius: 5px;
+  position: sticky;
+}
+.box-1{
+  border: 2px solid black;
+  background-color: aquamarine;
+  border-radius: 5px;
+  height: 400px;
+  width: 890px;
+  margin-left: 300px;
+  margin-top: 30px;
+}
+.user{
+  margin-left: 80px;
+  margin-top: 20px;
+}
+.name{
+  margin-left: 80px;
+  margin-top: 20px;
+}
+.total{
+  margin-left: 80px;
+  margin-top: 20px;
+}
+.but{
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-evenly;
+}
+.footer{
+  border: 2px solid black;
+  width: 900px;
+  height: 500px;
+  margin-left: 300px;
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: aquamarine;
+  color: black;
+}

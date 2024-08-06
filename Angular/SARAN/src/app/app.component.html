@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+  </head>
+  <body>
+    <div class="box">
+      <h1>MARK MANGENMENT SYSTEM</h1>
+    </div>
+      <div class="box-1">
+        <form #myForm="ngForm">
+
+        <div class="user">
+        <label for="user" class="form-label">REG.NO</label>
+    <input type="text"class="form-control" id="user" name="stdid" #stdid="ngModel" ngModel required pattern="[0-9]+" style="width: 700px; height: 45px;" placeholder="Enter your register number">
+  </div>
+
+  <div *ngIf="stdid.touched" style="margin-left: 82px;">
+    <div *ngIf="stdid.errors?.['required']">
+      <font color="red">Student Id Required</font>
+    </div>
+    <div *ngIf="stdid.errors?.['pattern']">
+      <font color="red">Invalid Student Id</font>
+    </div>
+  </div>
+
+
+  <div class="name">
+    <label for="name" class="form-label">NAME</label>
+<input type="text" class="form-control" id="name" name="stduser" #stduser="ngModel" ngModel required pattern="[a-z]+"  style="width: 700px; height: 45px;" placeholder="Enter your your name">
+</div>
+<div *ngIf="stduser.touched" style="margin-left: 82px;">
+  <div *ngIf="stduser.errors?.['required']">
+    <font color="red">Student Name Required</font>
+  </div>
+  <div *ngIf="stduser.errors?.['pattern']">
+    <font color="red">Invalid Student Name</font>
+  </div>
+</div>
+
+
+<div class="total">
+  <label for="mark" class="form-label">MARK</label>
+<input type="text" class="form-control" id="mark" name="stdmark" #stdmark="ngModel" ngModel required pattern="[0-9]+"  style="width: 700px; height: 45px;" placeholder="Enter your Mark">
+</div>
+<div *ngIf="stdmark.touched" style="margin-left: 82px;">
+  <div *ngIf="stdmark.errors?.['required']">
+    <font color="red">Student Mark Required</font>
+  </div>
+  <div *ngIf="stdmark.errors?.['pattern']">
+    <font color="red">Invalid Student Mark</font>
+  </div>
+</div>
+
+
+<div class="but">
+  <button  class="btn btn-primary " (click)="insertstudent(myForm.value)">insert</button>&nbsp;&nbsp;
+  <button class="btn btn-warning " (click)="updatestudent(myForm.value)">update</button>&nbsp;&nbsp;
+  <button  class="btn btn-danger" (click)="deletestudent(myForm.value)">delete</button>&nbsp;&nbsp;
+  <button  class="btn btn-success" (click)="findstudent(myForm.value)">find</button>&nbsp;&nbsp;
+  <button  class="btn btn-info"  (click)="findAllstudent()">FindAll</button>
+</div>
+</form>
+     </div>
+
+     <div class="footer">
+     <br>
+     <h3>{{result}}</h3>
+     <div style="width: 100%;" *ngIf="flag">
+      <table width="80%" align="center" class="table table-borderd" style="color: black;">
+       <tr><th>Student Id</th><th>Student Name</th><th>Student Mark</th></tr>
+        <tr *ngFor="let std of studentArr">
+            <td> {{std.id}} </td><td> {{std.stdName}} </td><td> {{std.stdmark}} </td>
+        </tr>
+     </table>
+     </div>
+    </div>
+  </body>
+</html>

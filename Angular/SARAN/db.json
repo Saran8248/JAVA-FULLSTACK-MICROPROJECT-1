@@ -1,0 +1,44 @@
+{
+  "student": [
+    {
+      "id": 1,
+      "stdName": "a",
+      "stdmark": 90
+    },
+    {
+      "id": 2,
+      "stdName": "b",
+      "stdmark": 70
+    },
+    {
+      "id": 3,
+      "stdName": "vk",
+      "stdmark": 100
+    },
+    {
+      "id": 8,
+      "stdName": "kabilan",
+      "stdmark": 600
+    },
+    {
+      "id": 99,
+      "stdName": "k",
+      "stdmark": ""
+    },
+    {
+      "id": 99,
+      "stdName": "k",
+      "stdmark": 20
+    },
+    {
+      "id": 99,
+      "stdName": "k",
+      "stdmark": 20
+    },
+    {
+      "id": 99,
+      "stdName": "k",
+      "stdmark": 20
+    }
+  ]
+}
